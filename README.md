@@ -1,7 +1,8 @@
 # Summer Project : Drone
 
 ## Expected timeline
-- by **28Sep24** 
+- by **28Sep24**     -
+    - check for heat loss
     - check correctness of nrf module
     - dummy transmitter
     - testing using dummy transmitter
@@ -14,6 +15,7 @@
 
 
 ## ToDo 
+- test total heat loss in tansistor (it better not trequire a heatsink)
 - establish communiction using nrf24lo1
 - design a dummy transmitter , joystick module
 - decide on using MOSFET or BJT in darlington config
