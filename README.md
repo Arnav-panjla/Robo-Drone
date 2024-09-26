@@ -18,3 +18,7 @@
 - design a dummy transmitter , joystick module
 - decide on using MOSFET or BJT in darlington config
 - make 2 or 3 pcb
+
+## References
+- NRF24lo1 communication working - https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/
+- Design of transmitter nad reciever using NRF24lo1 - https://howtomechatronics.com/projects/diy-arduino-rc-receiver/
