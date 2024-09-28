@@ -12,10 +12,12 @@ This section contains useful resources, including datasheets and manuals for the
 
 - **ESP32**:  [offical espressif ESP32 Manual](https://www.espressif.com/en/products/devkits/esp32-devkitc)
   <br>
+  <br>
   <img src="..\public\asssets\esp32_devkitC_v4_pinlayout.png" alt="ESP32 Pinout" width="600"/>
 
 
 - **ESP32-C3**:  [offical XiaoESP32C3 Manual](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
+  <br>
   <br>
   <img src="..\public\asssets\esp32c3_xiao_pinlayout.png" alt="ESP32-C3 Pinout" width="600"/>
 
