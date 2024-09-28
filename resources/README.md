@@ -4,8 +4,16 @@ This section contains useful resources, including datasheets and manuals for the
 
 ## Internal Links 🔗
 
-- **LM324 1GHz Opamp**: [LM324 Datasheet](./IRFZ44N.PDF)
-- **IRFZ44N n-channel mosfet**: [IRFZ444N Datasheet](./LM324.PDF)
+- **LM324 1GHz Opamp**: [LM324 Datasheet](./LM324.PDF)
+  <br>
+  <br>
+  <img src="..\public\asssets\LM324pinout.jpg" alt="ESP32 Pinout" width="400"/>
+
+- **IRFZ44N n-channel mosfet**: [IRFZ444N Datasheet](./IRFZ44N.PDF)
+  <br>
+  <br>
+  <img src="..\public\asssets\IRFZ44Npinout.jpg" alt="ESP32 Pinout" width="400"/>
+
 - **BMX160 Sensor Datasheet**: [BMX160 Sensor Datasheet](./BMX160datasheet.pdf)
 
 ## External Links 🌐
