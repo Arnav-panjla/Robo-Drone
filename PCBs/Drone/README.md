@@ -25,11 +25,11 @@ This README provides detailed information about the motor driver circuit designe
 
 ## 2. ⚙️ Circuit Overview
 
-### Motor Driver Circuit: [LM324 Datasheet](./MotorDriverSchematics.PDF)
+### Motor Driver Circuit: [Motor Driver Schematics PDF](./MotorDriverSchematics.PDF)
 
 The motor driver circuit is designed to interface with the ESP32 and control the speed and operation of a 3.7V motor. The circuit utilizes MOSFETs or a dedicated motor driver IC to manage the power to the motor efficiently.
 
-- **Voltage**: 3.7V
+- **Voltage**: 3.7V and 7.4 for powering opAMPs
 - **Current**: Up to 3.3A
 
 ### Complete Circuit with ESP32
@@ -59,13 +59,13 @@ The complete circuit integrates the ESP32 microcontroller, which acts as the bra
 ### Motor Driver Circuit Schematic
   <br>
   <br>
-  <img src="...\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
+  <img src="..\..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
   <br>
 
 ### Complete Circuit Schematic
   <br>
   <br>
-  <img src="...\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
+  <img src="..\..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
   <br>
 
 ---
