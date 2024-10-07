@@ -47,6 +47,7 @@ In addition to fundamental principles of electronics and mechanics, several adva
 
 - **PID Control**
 - **Kalman Filter**
+- **PCB designing**
 - **Quadcopter Mechanics**
 - **3D Design**
 - **ESP32 Wi-Fi Communication**
