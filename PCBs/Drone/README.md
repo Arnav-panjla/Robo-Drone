@@ -1,4 +1,4 @@
-# 🚁 Drone Motor Driver Circuit README
+# 🚁 Drone Driver Circuit
 
 ## 📚 Table of Contents
 1. [Introduction](#introduction)
