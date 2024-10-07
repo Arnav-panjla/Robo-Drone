@@ -3,14 +3,14 @@
 Welcome to the Drone Project, developed by the Robotics Club at IIT Delhi. This project showcases a fully custom drone built from scratch, featuring 3D-printed chassis, custom motor drivers, and a custom remote controller.
 
 ## Table of Contents 📚
-- [Introduction](#introduction)
-- [Components](#components)
-- [Design and Architecture](#design-and-architecture)
-- [Functionality](#functionality)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Introduction](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#introduction-)
+- [Components](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#components-%EF%B8%8F)
+- [Design and Architecture](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#design-and-architecture-%EF%B8%8F)
+- [Functionality](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#functionality-%EF%B8%8F)
+- [Usage](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#usage-)
+- [Contributions](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#contributions-)
+- [License](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#license-)
+- [Acknowledgements](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#acknowledgements-)
 
 ## Introduction 🌟
 
@@ -45,13 +45,10 @@ The drone is designed to be a versatile platform for exploring robotics, remote 
 2. Connect the remote controller to the drone's Wi-Fi network.
 3. Use the joystick remote to control the drone's movements.
 
-## Contributing 🤝
+## Contributions 🤝
 
 We welcome contributions from anyone interested in enhancing this project! To contribute:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request with a clear description of your changes.
 
 ## License 📜
 
@@ -60,7 +57,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements 🙏
 
 - Special thanks to the Robotics Club at IIT Delhi for their support and collaboration.
-- Special thanks to all my teammates, without whom this won't be possible.
+- I would like to thank the following friends for their invaluable help in building this repository:
+    - [Lakshay Bhatnagar](https://github.com/Lakshya-bh) 
+    - [Rishima Chaturvedi](https://github.com/friendusername)
 - Inspired by various open-source projects in the robotics community.
 
 ---
