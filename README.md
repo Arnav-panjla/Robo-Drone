@@ -7,7 +7,7 @@ Welcome to the Drone Project, developed by the Robotics Club at IIT Delhi. This 
 - [Components](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#components-%EF%B8%8F)
 - [Design and Architecture](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#design-and-architecture-%EF%B8%8F)
 - [Functionality](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#functionality-%EF%B8%8F)
-- [Theory Used](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#functionality-%EF%B8%8F)
+- [Theory Used](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#theory-used-)
 - [Usage](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#usage-)
 - [Contributions](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#contributions-)
 - [License](https://github.com/Arnav-panjla/Robo-Drone/blob/main/README.md#license-)
@@ -45,15 +45,11 @@ The drone is designed to be a versatile platform for exploring robotics, remote 
 
 In addition to fundamental principles of electronics and mechanics, several advanced concepts were utilized in the development of this project:
 
-- **PID Control**: Implemented to ensure precise control of motor speed and positioning, allowing for smooth and stable flight dynamics in the drone.
-  
-- **Kalman Filter**: Used for sensor fusion and to improve the accuracy of position and velocity estimates, helping to filter out noise from sensor data.
-
-- **Quadcopter Mechanics**: Understanding the principles of quadcopter flight dynamics, including thrust, lift, and stabilization, was crucial for effective design and control.
-
-- **3D Design**: Leveraged 3D modeling techniques to design custom parts and structures for the drone, optimizing weight and aerodynamics.
-
-- **ESP32 Wi-Fi Communication**: Integrated Wi-Fi capabilities of the ESP32 to enable wireless control and telemetry, enhancing the operational range and functionality of the drone.
+- **PID Control**
+- **Kalman Filter**
+- **Quadcopter Mechanics**
+- **3D Design**
+- **ESP32 Wi-Fi Communication**
 
 These theories and technologies collectively contributed to the successful implementation and performance of the drone project.
 
