@@ -25,7 +25,7 @@ This README provides detailed information about the motor driver circuit designe
 
 ## 2. ⚙️ Circuit Overview
 
-### Motor Driver Circuit: [Motor Driver Schematics PDF](.\MotorDriverSchematics.pdf)
+### Motor Driver Circuit: [Motor Driver Schematics PDF](./MotorDriverSchematics.pdf)
 
 The motor driver circuit is designed to interface with the ESP32 and control the speed and operation of a 3.7V motor. The circuit utilizes MOSFETs or a dedicated motor driver IC to manage the power to the motor efficiently.
 
