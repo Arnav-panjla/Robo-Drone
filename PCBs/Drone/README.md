@@ -1,6 +1,6 @@
-# Drone Motor Driver Circuit README
+# 🚁 Drone Motor Driver Circuit README
 
-## Table of Contents
+## 📚 Table of Contents
 1. [Introduction](#introduction)
 2. [Circuit Overview](#circuit-overview)
    - [Motor Driver Circuit](#motor-driver-circuit)
@@ -17,18 +17,15 @@
 
 ---
 
-## 1. Introduction
+## 1. 📝 Introduction
 
 This README provides detailed information about the motor driver circuit designed for controlling four propellers of a drone using an ESP32 microcontroller. The motor driver circuit is capable of handling up to 3.3A at maximum load and is designed to operate a 3.7V motor in a single direction.
 
 ---
 
-## 2. Circuit Overview
+## 2. ⚙️ Circuit Overview
 
-### Motor Driver Circuit: [schematics PDF](./Motor Driver Schematics.pdf)
-  <br>
-  <br>
-  <img src="..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
+### Motor Driver Circuit: [LM324 Datasheet](./MotorDriverSchematics.PDF)
 
 The motor driver circuit is designed to interface with the ESP32 and control the speed and operation of a 3.7V motor. The circuit utilizes MOSFETs or a dedicated motor driver IC to manage the power to the motor efficiently.
 
@@ -41,35 +38,39 @@ The complete circuit integrates the ESP32 microcontroller, which acts as the bra
 
 ---
 
-## 3. Components List
+## 3. 🔧 Components List
 
 | Component           | Quantity | Description                     |
 |---------------------|----------|---------------------------------|
 | ESP32C3 Xia         | 1        | Microcontroller                 |
-| opAMP               | 4        | part of motor driver circuit    |
+| opAMP               | 4        | Part of motor driver circuit    |
 | N-channel MOSFET    | 4        | For motor control               |
 | Resistors           | Various  | Pull-down and for opAMPs        |
 | Capacitors          | 4        | Decoupling and filtering        |
 | Diodes              | 4        | Flyback diodes for protection   |
 | Connectors          | Various  | For connecting motors and power |
-| Power Supply        | 1        | 3.7V battery                    |
+| Power Supply        | 2        | 3.7V batteries                  |
 | PCB                 | 1        | Custom PCB designed in EasyEDA  |
 
 ---
 
-## 4. Schematic Diagrams
+## 4. 📐 Schematic Diagrams
 
 ### Motor Driver Circuit Schematic
-
-*Insert Motor Driver Circuit Schematic here.*
+  <br>
+  <br>
+  <img src="...\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
+  <br>
 
 ### Complete Circuit Schematic
-
-*Insert Complete Circuit Schematic here.*
+  <br>
+  <br>
+  <img src="...\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="800"/>
+  <br>
 
 ---
 
-## 5. Connections and Pinouts
+## 5. 🔌 Connections and Pinouts
 
 ### ESP32 Pinouts
 
@@ -84,14 +85,14 @@ The complete circuit integrates the ESP32 microcontroller, which acts as the bra
 
 ---
 
-## 6. Operation
+## 6. ⚡ Operation
 
 - The ESP32 sends PWM signals to the motor drivers to control the speed and operation of each motor.
 - Ensure that the code is properly uploaded to the ESP32 to manage motor functions as desired.
 
 ---
 
-## 7. Safety Precautions
+## 7. ⚠️ Safety Precautions
 
 - Ensure all connections are secure to prevent shorts.
 - Use appropriate heat sinks for MOSFETs if necessary to avoid overheating.
@@ -99,7 +100,7 @@ The complete circuit integrates the ESP32 microcontroller, which acts as the bra
 
 ---
 
-## 8. Future Improvements
+## 8. 🚀 Future Improvements
 
 - Consider adding a speed feedback mechanism for better control.
 - Explore options for direction control (e.g., H-bridge configuration).
@@ -107,9 +108,9 @@ The complete circuit integrates the ESP32 microcontroller, which acts as the bra
 
 ---
 
-## 9. References
-- check out resources repo
+## 9. 📖 References
 
+- Check out resources repo
 
 ---
 
