@@ -23,10 +23,10 @@ void onDataRecv(const esp_now_recv_info_t *info, const uint8_t *data, int len) {
 
   // Convert the received string to an integer
   pwmval = atoi(receivedData);
-  if (pwmval<1760){
-    pwmval=1750;
+  if (pwmval<200){
+    pwmval=200;
   }
-  int pwm1= map(pwmval, 1750, 4095, 0, 255);
+  int pwm1= map(pwmval, 200, 4095, 0, 255);
   analogWrite(fadePin1, pwm1);
   analogWrite(fadePin2, pwm1);
   analogWrite(fadePin3, pwm1);

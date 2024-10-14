@@ -1,6 +1,6 @@
 #include <esp_now.h>
 #include <WiFi.h>
-#define X_AXIS_PIN 32   // Joystick X-axis connected to D14
+#define PotPIN 36   // Joystick X-axis connected to D14
 #define Y_AXIS_PIN 35   // Joystick Y-axis connected to D27
 #define BUTTON_PIN 23   // Joystick button connected to D23 (you can change this if needed)
 #define ESPNOW_WIFI_CHANNEL 6
@@ -52,20 +52,22 @@ void setup() {
 
 void loop() {
   char data[32];
-  int xVal = analogRead(X_AXIS_PIN);  // Read the X-axis value
+  int PotVal = analogRead(PotPIN);  // Read the X-axis value
   //yvalue();
   //Serial.println(yVal);
   //Serial.println(xVal);
   yVal = analogRead(Y_AXIS_PIN);  // Read the Y-axis value
+
+  int Val = (9/10)*PotVal + yVal/10 ;
   
   int buttonVal = digitalRead(BUTTON_PIN);
   // Convert yVal to string and send it
-  snprintf(data, sizeof(data), "%d", yVal);  // Sending yVal
+  snprintf(data, sizeof(data), "%d", Val);  // Sending yVal
   //snprintf(data, sizeof(data), "%d", buttonVal);
   // Broadcast the message
   if (esp_now_send(broadcastAddress, (uint8_t *)data, sizeof(data)) == ESP_OK) {
-    Serial.print("Broadcasting yVal: ");
-    Serial.println(yVal);
+    Serial.print("Broadcasting Val: ");
+    Serial.println(Val);
     //Serial.println(buttonVal);
   } else {
     Serial.println("Failed to send data");
