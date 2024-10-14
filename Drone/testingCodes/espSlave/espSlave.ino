@@ -1,79 +1,67 @@
 #include <esp_now.h>
 #include <WiFi.h>
 
-
-
-/// transmitting the recieved signal to all motor pins 
-
 #define ESPNOW_WIFI_CHANNEL 6
-const int fadePin1 = D7;
-const int fadePin2 = D8;
-const int fadePin3 = D9;
-const int fadePin4 = D10;
+
+const int fadePins[] = {D10, D9, D8, D7}; // Array of fade pins
 const int LEDpin = D6;
+int pwmval = 0;
+unsigned long lastSignalTime = 0; // Track the last time a signal was received
+const unsigned long blinkInterval = 500; // Blink interval in milliseconds
+bool ledState = false; // Track LED state
 
-int pwmval(0);
-
-// Correct callback function signature
 void onDataRecv(const esp_now_recv_info_t *info, const uint8_t *data, int len) {
-  // Ensure the received data is null-terminated
+  if (len <= 0) return;
+
   char receivedData[len + 1];
   memcpy(receivedData, data, len);
-  receivedData[len] = '\0';  // Null-terminate the string
+  receivedData[len] = '\0';
 
-  // Convert the received string to an integer
   pwmval = atoi(receivedData);
-  if (pwmval<200){
-    pwmval=200;
+  if (pwmval < 200) {
+    pwmval = 200;
   }
-  int pwm1= map(pwmval, 200, 4095, 0, 255);
-  analogWrite(fadePin1, pwm1);
-  analogWrite(fadePin2, pwm1);
-  analogWrite(fadePin3, pwm1);
-  analogWrite(fadePin4, pwm1);
 
-  digitalWrite(LEDpin,HIGH);// lighing the blue LED
+  int pwm1 = map(pwmval, 200, 4095, 0, 255);
 
-  // Print the received pwmval
-  Serial.printf("Received pwmval: %d\n", pwm1);
+  // Write the PWM value to all fade pins
+  for (int i = 0; i < sizeof(fadePins) / sizeof(fadePins[0]); i++) {
+    analogWrite(fadePins[i], pwm1);
+  }
+
+  digitalWrite(LEDpin, HIGH); // Turn LED off when data is received
+  lastSignalTime = millis(); // Update the last signal time
 }
 
-
 void setup() {
-  Serial.begin(115200);
-  pinMode(fadePin1, OUTPUT);
-  pinMode(fadePin2, OUTPUT);
-  pinMode(fadePin3, OUTPUT);
-  pinMode(fadePin4, OUTPUT);
-  pinMode(LEDpin,OUTPUT);
-
-
-
-  while (!Serial) {
-    delay(10);
+  for (int i = 0; i < sizeof(fadePins) / sizeof(fadePins[0]); i++) {
+    pinMode(fadePins[i], OUTPUT); // Set each fade pin as output
   }
-
-  // Initialize Wi-Fi in station mode
+  
+  pinMode(LEDpin, OUTPUT);
+  
   WiFi.mode(WIFI_STA);
   WiFi.setChannel(ESPNOW_WIFI_CHANNEL);
 
-  // Initialize ESP-NOW
   if (esp_now_init() != ESP_OK) {
-    Serial.println("Error initializing ESP-NOW");
-    ESP.restart();
+    // Indicate error on LED
+    while (true) {
+      digitalWrite(LEDpin, HIGH);
+      delay(100);
+      digitalWrite(LEDpin, LOW);
+      delay(100);
+    }
   }
 
-  // Register the callback function for receiving data
   esp_now_register_recv_cb(onDataRecv);
-
-  digitalWrite(LEDpin,LOW);//LED at low state
-  Serial.println("Slave setup complete. Waiting for data...");
+  digitalWrite(LEDpin, HIGH); // Start with LED off initially
 }
 
 void loop() {
-  //analogWrite(fadePin, pwmval);
-
-  // Nothing to do here. All data is handled in the onDataRecv callback
-  // Serial.println(pwmval);
-  delay(1000);
+  // Check if enough time has passed since the last signal was received
+  if (millis() - lastSignalTime > 1000) { // 1 second without a signal
+    ledState = !ledState; // Toggle LED state
+    digitalWrite(LEDpin, ledState ? HIGH : LOW); // Set LED
+    delay(blinkInterval); // Delay to control blink speed
+  }
 }
