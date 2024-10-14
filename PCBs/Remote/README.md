@@ -1,115 +1,64 @@
-# 🚁 Remote Circuit
+# Remote PCB for Drone Control 🚀
 
-## 📚 Table of Contents
-1. [Introduction](#introduction)
-2. [Circuit Overview](#circuit-overview)
-   - [Motor Driver Circuit](#motor-driver-circuit)
-   - [Complete Circuit with ESP32](#complete-circuit-with-esp32)
-3. [Components List](#components-list)
-4. [Schematic Diagrams](#schematic-diagrams)
-   - [Motor Driver Circuit Schematic](#motor-driver-circuit-schematic)
-   - [Complete Circuit Schematic](#complete-circuit-schematic)
-5. [Connections and Pinouts](#connections-and-pinouts)
-6. [Operation](#operation)
-7. [Safety Precautions](#safety-precautions)
-8. [Future Improvements](#future-improvements)
-9. [References](#references)
+## Overview
 
----
+This repository contains the design and documentation for a remote PCB used to control a self-made drone. The remote features an ESP32 microcontroller, two joysticks, two potentiometers, two buttons, and onboard LEDs to indicate the success or failure of signal transmission. The system is powered by a 2S battery, with voltage regulation to ensure stable operation.
 
-## 1. 📝 Introduction
+## Components 🛠️
 
-This README provides detailed information about the wifi remote designed for controlling four propellers of a drone using an ESP32 microcontroller. 
+- **Microcontroller**: ESP32
+- **Input Devices**: 
+  - 2 Joysticks
+  - 2 Potentiometers
+  - 2 Buttons
+- **LED Indicators**: For success/failure of signal transmission
+- **Power Supply**: 
+  - 2S LiPo Battery
+  - Voltage regulator: LM7806 (step down to 6V) and onboard voltage converter to 3.3V
 
----
+## Features 🌟
 
-## 2. ⚙️ Circuit Overview
+- **Real-time Control**: The joysticks allow for precise control of the drone's movements.
+- **Adjustable Parameters**: Potentiometers can be used to adjust flight parameters such as speed and altitude.
+- **Status Indication**: Onboard LEDs provide visual feedback on signal status.
+- **Compact Design**: Optimized for integration with a drone.
 
-### Motor Driver Circuit: [Motor Driver Schematics PDF](./MotorDriverSchematics.pdf)
+## Schematic 🖼️
 
-The motor driver circuit is designed to interface with the ESP32 and control the speed and operation of a 3.7V motor. The circuit utilizes MOSFETs or a dedicated motor driver IC to manage the power to the motor efficiently.
+![Schematic Diagram](link-to-your-schematic)  
+*Attach your schematic diagram here.*
 
-- **Voltage**: 3.7V and 7.4 for powering opAMPs
-- **Current**: Up to 3.3A
+## Wiring Diagram 🖼️
 
-### Complete Circuit with ESP32
+![Wiring Diagram](link-to-your-wiring)  
+*Attach your wiring diagram here.*
 
-The complete circuit integrates the ESP32 microcontroller, which acts as the brain of the drone, controlling the four motor driver circuits. Each motor driver is controlled by a PWM signal from the ESP32.
+## Setup Instructions ⚙️
 
----
+1. **Power Connection**:
+   - Connect a 2S LiPo battery to the power input of the PCB.
+   - The LM7806 will step down the voltage to 6V, and the onboard converter will provide 3.3V for the ESP32.
 
-## 3. 🔧 Components List
+2. **Input Device Connections**:
+   - Connect the joysticks and potentiometers to the designated analog input pins on the ESP32.
+   - Connect the buttons to digital input pins.
 
-| Component           | Quantity | Description                     |
-|---------------------|----------|---------------------------------|
-| ESP32C3 Xia         | 1        | Microcontroller                 |
-| opAMP               | 4        | Part of motor driver circuit    |
-| N-channel MOSFET    | 4        | For motor control               |
-| Resistors           | Various  | Pull-down and for opAMPs        |
-| Capacitors          | 4        | Decoupling and filtering        |
-| Diodes              | 4        | Flyback diodes for protection   |
-| Connectors          | Various  | For connecting motors and power |
-| Power Supply        | 2        | 3.7V batteries                  |
-| PCB                 | 1        | Custom PCB designed in EasyEDA  |
+3. **LED Connections**:
+   - Connect the LEDs to appropriate GPIO pins for status indication.
 
----
+4. **Programming the ESP32**:
+   - Use the Arduino IDE or PlatformIO to upload the control code to the ESP32.
+   - Ensure the necessary libraries for the ESP32 and input devices are installed.
 
-## 4. 📐 Schematic Diagrams
+## Usage 🎮
 
-### Motor Driver Circuit Schematic
-  <br>
-  <img src="..\..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="600"/>
-  <br>
+1. Power on the remote by connecting the 2S battery.
+2. The onboard LEDs will indicate the power status and signal transmission status.
+3. Use the joysticks to control the drone's movements and the potentiometers to adjust flight settings.
+4. Press the buttons for additional functionalities (e.g., takeoff, landing).
 
-### Complete Circuit Schematic
-  <br>
-  <img src="..\..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="600"/>
-  <br>
+## Troubleshooting 🔧
 
----
-
-## 5. 🔌 Connections and Pinouts
-
-### ESP32 Pinouts
-
-- **GPIO Pins**: Used for PWM control of the motor drivers.
-- **Power Supply**: Connect to the appropriate power source (3.7V).
-  
-### Motor Driver Connections
-
-- **Input Pins**: Connect to the corresponding GPIO pins of the ESP32.
-- **Motor Terminals**: Connect to the propellers.
-- **Power Connections**: Ensure correct voltage and current ratings are followed.
-
----
-
-## 6. ⚡ Operation
-
-- The ESP32 sends PWM signals to the motor drivers to control the speed and operation of each motor.
-- Ensure that the code is properly uploaded to the ESP32 to manage motor functions as desired.
-
----
-
-## 7. ⚠️ Safety Precautions
-
-- Ensure all connections are secure to prevent shorts.
-- Use appropriate heat sinks for MOSFETs if necessary to avoid overheating.
-- Double-check component ratings to avoid damage.
-
----
-
-## 8. 🚀 Future Improvements
-
-- Consider adding a speed feedback mechanism for better control.
-- Explore options for direction control (e.g., H-bridge configuration).
-- Implement wireless control features using ESP32 capabilities.
-
----
-
-## 9. 📖 References
-
-- Check out resources repo
-
----
-
-*Please fill in the schematic diagrams and any additional explanations as necessary.*
+- **LEDs Not Lighting Up**: Check power connections and ensure the battery is charged.
+- **Signal Transmission Issues**: Verify the connections to the ESP32 and the antennas if used.
+- **Unresponsive Inputs**: Ensure that the joysticks and potentiometers are connected properly.
