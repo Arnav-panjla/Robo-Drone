@@ -34,7 +34,16 @@ The development of this motor driver circuit is essential for several reasons:
 
 - **Optimization for Drones**: The design is fully optimized for drone operations, ensuring efficient control of the motors under varying loads and conditions.
 
-- **Signal Amplification**: The 3.3V output from the ESP32 was insufficient to drive the MOSFETs directly. To address this, we incorporated an operational amplifier (op-amp) with a non-inverting gain of 1.5. This setup amplifies the 3.3V signal to approximately 5V, effectively driving the MOSFETs and consequently powering the drone motors.
+
+
+- **Signal Amplification**:
+  <br>
+  <br>
+  <img src="..\..\public\asssets\DriverSignal.jpg" alt="Motor Driver" width="400"/>
+  <br>
+ The 3.3V output from the ESP32 was insufficient to drive the MOSFETs directly. To address this, we incorporated an operational amplifier (op-amp) with a non-inverting gain of 1.5. This setup amplifies the 3.3V signal to approximately 5V, effectively driving the MOSFETs and consequently powering the drone motors.
+
+
 
 ---
 
