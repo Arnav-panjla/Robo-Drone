@@ -1,4 +1,7 @@
 # Remote PCB for Drone Control 🚀
+  <br>
+  <img src="..\..\public\asssets\droneremote.jpg" alt="Motor Driver" width="550"/>
+  <br>
 
 ## Overview
 
