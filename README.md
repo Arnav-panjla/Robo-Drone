@@ -3,8 +3,8 @@
 Welcome to the Drone Project, developed by the Robotics Club at IIT Delhi. This project showcases a fully custom drone built from scratch, featuring 3D-printed chassis, custom motor drivers, and a custom remote controller.
   <br>
   <br>
-  <img src="public\asssets\Drone.jpg" alt="Drone" width="300"/>
-  <img src="public\asssets\droneremote.jpg" alt="Motor Driver" width="365"/>
+  <img src="public\asssets\Drone.jpg" alt="Drone" width="400"/>
+  <img src="public\asssets\droneremote.jpg" alt="Motor Driver" width="400"/>
   <br>
 
 ## Table of Contents 📚

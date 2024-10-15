@@ -1,6 +1,6 @@
 # Remote PCB for Drone Control 🚀
   <br>
-  <img src="..\..\public\asssets\droneremote.jpg" alt="Motor Driver" width="550"/>
+  <img src="..\..\public\asssets\droneremote.jpg" alt="Motor Driver" width="400"/>
   <br>
 
 ## Overview
@@ -28,13 +28,15 @@ This repository contains the design and documentation for a remote PCB used to c
 
 ## Schematic 🖼️
 
-![Schematic Diagram](link-to-your-schematic)  
-*Attach your schematic diagram here.*
+  <br>
+  <img src="..\..\public\asssets\RemoteSch.jpg" alt="Motor Driver" width="600"/>
+  <br>
 
 ## Wiring Diagram 🖼️
 
-![Wiring Diagram](link-to-your-wiring)  
-*Attach your wiring diagram here.*
+  <br>
+  <img src="..\..\public\asssets\droneremote.jpg" alt="Motor Driver" width="600"/>
+  <br>*
 
 ## Setup Instructions ⚙️
 

@@ -57,7 +57,7 @@ The motor driver circuit interfaces with the ESP32 to control the speed and oper
 - **Voltage**: 3.7V and 7.4V for powering op-amps
 - **Current**: Up to 3.3A
 
-### Complete Circuit with ESP32
+### Complete Circuit with ESP32 [Motor Driver Schematics PDF](./DroneDriverSchematics.pdf)
 
 The complete circuit integrates the ESP32S# microcontroller, controlling the four motor driver circuits with PWM signals.
 
