@@ -27,7 +27,8 @@ This README provides detailed information about the motor driver circuit designe
 ---
 
 ## 2. 🛠️ Necessity of Creating the Motor Driver
-
+<img src="..\..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="600"/>
+<br>
 The development of this motor driver circuit is essential for several reasons:
 
 - **High Current Handling**: This motor driver can handle up to 3.3A, which is unmatched by other drivers in the market within this price range, making it an economical yet powerful solution for drone applications.
