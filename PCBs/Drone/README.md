@@ -1,8 +1,8 @@
-# 🚁 Drone Driver Circuit
+#  Drone Driver Circuit
 
-<img src="..\..\public\asssets\DroneDriver.jpg" alt="Motor Driver" width="400"/>
+<img src="..\..\public\asssets\DroneDriverMerge.jpg" alt="Motor Driver" width="600"/>
 
-## 📚 Table of Contents
+<!-- ## 📚 Table of Contents
 1. [Introduction](#introduction)
 2. [Necessity of Creating the Motor Driver](#necessity-of-creating-the-motor-driver)
 3. [Testing Video](#testing-video)
@@ -16,7 +16,7 @@
 7. [Connections and Pinouts](#connections-and-pinouts)
 8. [Operation and Safety Precautions](#operation-and-safety-precautions)
 9. [Future Improvements](#future-improvements)
-10. [References](#references)
+10. [References](#references) -->
 
 ---
 
@@ -89,12 +89,8 @@ The complete circuit integrates the ESP32S# microcontroller, controlling the fou
 
 ---
 
-## 6. 📐 Schematic Diagrams
+## 6. 📐 Complete Schematic Diagrams
 
-### Motor Driver Circuit Schematic
-<img src="..\..\public\asssets\MotorDriver.jpg" alt="Motor Driver" width="600"/>
-
-### Complete Circuit Schematic
 <img src="..\..\public\asssets\DroneSchemstics.jpg" alt="Drone Schematics" width="600"/>
 
 ---
@@ -121,7 +117,7 @@ The complete circuit integrates the ESP32S# microcontroller, controlling the fou
 
 ### Safety Precautions
 - Ensure all connections are secure to prevent shorts.
-- Use appropriate heat sinks for MOSFETs if necessary to avoid overheating.
+- Beware of heating of MOSFETs, heatsink not used therefore avoid continuous usage.
 - Double-check component ratings to avoid damage.
 
 ---
@@ -130,10 +126,11 @@ The complete circuit integrates the ESP32S# microcontroller, controlling the fou
 
 - Consider adding a speed feedback mechanism for better control.
 - Explore options for direction control (e.g., H-bridge configuration).
+- Explore professional PCB milling.
 - Implement wireless control features using ESP32 capabilities.
 
 ---
 
 ## 10. 📖 References
 
-- Check out resources repository.
+- Check out [resources](../../resources/) repository.
